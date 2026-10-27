@@ -19,6 +19,10 @@ function GameCard(props) {
 
       <p>Genre: {props.genre}</p>
 
+      <p>Developer: {props.developer}</p>
+
+      <p>Multiplayer: {props.multiplayer}</p>
+
       <p>Rating: ⭐ {props.rating}</p>
 
       <p>Jaar: {props.year}</p>
