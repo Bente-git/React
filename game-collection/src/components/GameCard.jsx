@@ -9,6 +9,12 @@ function GameCard(props) {
 
       <p>Platform: {props.platform}</p>
 
+      <p>Genre: {props.genre}</p>
+
+      <p>Rating: ⭐ {props.rating}</p>
+
+      <p>Jaar: {props.year}</p>
+
       <button
         className="favorite-button"
         onClick={() => setFavorite(!favorite)}

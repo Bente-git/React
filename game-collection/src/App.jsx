@@ -3,44 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import GameCard from "./components/GameCard";
-
-const games = [
-  {
-    id: 1,
-    title: "Minecraft",
-    platform: "PC",
-  },
-  {
-    id: 2,
-    title: "Mario Kart",
-    platform: "Nintendo Switch",
-  },
-  {
-    id: 3,
-    title: "Rocket League",
-    platform: "PlayStation 5",
-  },
-  {
-    id: 4,
-    title: "Genshin Impact",
-    platform: "P]",
-  },
-  {
-    id: 5,
-    title: "The Legend of Zelda",
-    platform: "Nintendo Switch",
-  },
-  {
-    id: 6,
-    title: "Fortnite",
-    platform: "PC",
-  },
-  {
-    id: 7,
-    title: "EA Sports FC 26",
-    platform: "PlayStation 5",
-  },
-];
+import games from "./data/games.json";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -75,6 +38,9 @@ function App() {
               key={game.id}
               title={game.title}
               platform={game.platform}
+              genre={game.genre}
+              rating={game.rating}
+              year={game.year}
             />
           ))}
       </div>
