@@ -2,17 +2,19 @@ import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>🎮 Game Collection</h1>
+    <div className="container">
+      <h1 className="title">🎮 Game Collection</h1>
 
-      <h2>Welkom bij mijn eerste React-applicatie!</h2>
+      <div className="games">
+        <h2>Welkom bij mijn eerste React-applicatie!</h2>
 
-      <p>Naam: Bente Schutte</p>
+        <p>Naam: Bente Schutte</p>
 
-      <p>Studentnummer: 2235343</p>
+        <p>Studentnummer: 2235343</p>
 
-      <p>Klas: 25B</p>
-    </>
+        <p>Klas: 25B</p>
+      </div>
+    </div>
   );
 }
 
