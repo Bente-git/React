@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -22,11 +23,28 @@ const games = [
   {
     id: 4,
     title: "Genshin Impact",
+    platform: "P]",
+  },
+  {
+    id: 5,
+    title: "The Legend of Zelda",
+    platform: "Nintendo Switch",
+  },
+  {
+    id: 6,
+    title: "Fortnite",
     platform: "PC",
+  },
+  {
+    id: 7,
+    title: "EA Sports FC 26",
+    platform: "PlayStation 5",
   },
 ];
 
 function App() {
+  const [search, setSearch] = useState("");
+
   return (
     <div className="container">
       <Header title="🎮 Game Collection" />
@@ -40,13 +58,25 @@ function App() {
 
         <p>Klas: 25B</p>
 
-        {games.map((game) => (
-          <GameCard
-            key={game.id}
-            title={game.title}
-            platform={game.platform}
-          />
-        ))}
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Zoek een game..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        {games
+          .filter((game) =>
+            game.title.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((game) => (
+            <GameCard
+              key={game.id}
+              title={game.title}
+              platform={game.platform}
+            />
+          ))}
       </div>
 
       <Footer />
